@@ -89,3 +89,11 @@ body {
     border-bottom: 0;
   }
 }
+
+.image{
+  width: 150px;
+  height: 150px;
+  background-image: url("../images/bg.png");
+  background-size: 100% auto;
+  background-position: 0px -150px;
+}
