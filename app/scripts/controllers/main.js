@@ -16,7 +16,12 @@ angular.module('mySaladApp')
     ];
 
     $scope.generateNumber = function(){
+
     	$scope.randomNumber = Math.floor(Math.random()*4);
+
+      $scope.newHeight = $scope.randomNumber * (- 150);//instead of a 'switch' block
+
+      $scope.square = "background-position: 0px " + $scope.newHeight + "px;";      
     };
    
 
