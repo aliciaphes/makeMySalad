@@ -18,11 +18,24 @@ angular.module('mySaladApp')
     $scope.generateNumber = function(){
 
     	$scope.randomNumber = Math.floor(Math.random()*4);
-
-      $scope.newHeight = $scope.randomNumber * (- 150);//instead of a 'switch' block
-
-      $scope.square = "background-position: 0px " + $scope.newHeight + "px;";      
+      $scope.newHeight    = $scope.randomNumber * (- 150);//instead of a 'switch' block
+      $scope.square       = "background-position: 0px " + $scope.newHeight + "px;";//backgroundPosition?      
     };
+
+    $scope.animate = function(){
+
+      $scope.intervId = setInterval(function() {
+        $scope.$apply($scope.generateNumber);
+      }, 1000);
+    
+    };
+
+    $scope.stop = function(){
+
+      clearInterval($scope.intervId);
+    
+    };
+    
    
 
-  });
+  });//controller

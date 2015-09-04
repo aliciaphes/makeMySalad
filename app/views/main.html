@@ -24,13 +24,21 @@
 
 
 
-<div>
-<button class="btn btn-active" ng-click="generateNumber()" >Generate random number</button>
-<span style="border: 1px solid black;">{{ randomNumber }}</span> --> <span>{{ newHeight }}</span>
+<div>  
+
+  <button class="btn btn-active" ng-click="animate()">Start animation</button>
+
+  <span style="border: 1px solid black;">{{ randomNumber }}</span> --> <span>{{ newHeight }}</span>
+
+  <br/>
+  <button class="btn btn-active" ng-click="stop()">Stop</button>
+
+  <div class="image" style="{{square}}"></div>
+
 </div>
 
 
 
-<div class="image" style="{{square}}"></div>
+
 
 
